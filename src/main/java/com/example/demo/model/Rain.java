@@ -16,9 +16,9 @@ public class Rain {
     private Integer id;
 
     @JsonProperty("1h")
-    private Double _1h;
+    private Double volume1h;
 
     @JsonProperty("3h")
-    private Double _3h;
+    private Double volume3h;
 }
 

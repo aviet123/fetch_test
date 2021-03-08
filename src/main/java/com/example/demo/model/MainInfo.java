@@ -18,13 +18,21 @@ public class MainInfo {
     private Integer id;
 
     private Double temp;
-    private Double feels_like;
-    private Double temp_min;
-    private Double temp_max;
+
+
+    @JsonProperty("feels_like")
+    private Double feelsLike;
+
+    @JsonProperty("temp_min")
+    private Double tempMin;
+
+    @JsonProperty("temp_max")
+    private Double tempMax;
     private Integer pressure;
     private Integer humidity;
+    @JsonProperty("sea_level")
+    private Integer seaLevel;
 
-    private Integer sea_level;
-
-    private Integer grnd_level;
+    @JsonProperty("grnd_level")
+    private Integer groundLevel;
 }
