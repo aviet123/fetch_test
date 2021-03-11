@@ -42,13 +42,13 @@ public class MainInfoServiceImpl implements MainInfoService {
         Optional<MainInfo> oldMain = findById(id);
         if (oldMain.isPresent()){
             oldMain.get().setTemp(mainInfo.getTemp());
-            oldMain.get().setTemp_max(mainInfo.getTemp_max());
-            oldMain.get().setTemp_min(mainInfo.getTemp_min());
-            oldMain.get().setFeels_like(mainInfo.getFeels_like());
+            oldMain.get().setTempMax(mainInfo.getTempMax());
+            oldMain.get().setTempMin(mainInfo.getTempMin());
+            oldMain.get().setFeelsLike(mainInfo.getFeelsLike());
             oldMain.get().setHumidity(mainInfo.getHumidity());
             oldMain.get().setPressure(mainInfo.getPressure());
-            oldMain.get().setSea_level(mainInfo.getSea_level());
-            oldMain.get().setGrnd_level(mainInfo.getGrnd_level());
+            oldMain.get().setSeaLevel(mainInfo.getSeaLevel());
+            oldMain.get().setGroundLevel(mainInfo.getGroundLevel());
             return mainInfoRepository.save(oldMain.get());
         }
         return null;
