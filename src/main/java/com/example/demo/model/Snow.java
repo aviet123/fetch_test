@@ -17,8 +17,8 @@ public class Snow {
     private Integer id;
 
     @JsonProperty("1h")
-    private Double volume_1h;
+    private Double volume1h;
 
     @JsonProperty("3h")
-    private Double volume_3h;
+    private Double volume3h;
 }

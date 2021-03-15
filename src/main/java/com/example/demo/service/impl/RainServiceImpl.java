@@ -42,8 +42,8 @@ public class RainServiceImpl implements RainService {
     public Rain update(Integer id, Rain rain) {
         Optional<Rain> oldRain = findById(id);
         if (oldRain.isPresent()){
-            oldRain.get().set_1h(rain.get_1h());
-            oldRain.get().set_3h(rain.get_3h());
+            oldRain.get().setVolume1h(rain.getVolume1h());
+            oldRain.get().setVolume3h(rain.getVolume3h());
             return rainRepository.save(oldRain.get());
         }
         return null;

@@ -42,8 +42,8 @@ public class SnowServiceImpl implements SnowService {
     public Snow update(Integer id, Snow snow) {
         Optional<Snow> oldSnow = findById(id);
         if (oldSnow.isPresent()){
-            oldSnow.get().setVolume_1h(snow.getVolume_1h());
-            oldSnow.get().setVolume_3h(snow.getVolume_3h());
+            oldSnow.get().setVolume1h(snow.getVolume1h());
+            oldSnow.get().setVolume3h(snow.getVolume3h());
             return snowRepository.save(oldSnow.get());
         }
         return null;
